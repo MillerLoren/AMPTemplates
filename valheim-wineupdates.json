@@ -78,7 +78,7 @@
       "UpdateSourceArgs":"winescript.sh",
       "UpdateSourceTarget":"{{$FullInstanceDir}}",
       "OverwriteExistingFiles":true,
-      "UpdateSourceConditionSetting":"BepInExEnabled",
+      "UpdateSourceConditionSetting": "bepinex_install",
       "UpdateSourceConditionValue":"true"
   },
   {
@@ -87,7 +87,7 @@
       "UpdateSource":"Executable",
       "UpdateSourceData":"/bin/bash",
       "UpdateSourceArgs":"./winescript.sh",
-      "UpdateSourceConditionSetting":"BepInExEnabled",
+      "UpdateSourceConditionSetting": "bepinex_install",
       "UpdateSourceConditionValue":"true",
       "SkipOnFailure":false
   }
