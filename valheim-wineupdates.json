@@ -5,7 +5,7 @@
     "UpdateSource": "SteamCMD", 
     "UpdateSourceData": "896660",
     "UpdateSourceArgs":"892970",
-    "UpdateSourceVersion": "{{Stream}}"
+    "ForceDownloadPlatform":"Windows"
   },
   {
     "UpdateStageName": "Update Saves Directory - Windows",
