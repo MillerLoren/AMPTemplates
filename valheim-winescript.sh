@@ -12,7 +12,7 @@ done
 read -r DPY_NUM < display.log
 rm display.log
 
-export WINEPREFIX="$SCRIPTDIR/v-rising/.wine"
+export WINEPREFIX="$SCRIPTDIR/valheim/.wine"
 export WINEDLLOVERRIDES="mscoree,mshtml="
 export WINEARCH=win64
 export WINEDEBUG=fixme-all
