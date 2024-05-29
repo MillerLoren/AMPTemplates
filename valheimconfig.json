@@ -25,10 +25,10 @@
   {
     "DisplayName": "Server Password",
     "Description": "Password that clients must supply in order to connect.",
-    "FieldName": "ServerPassword",
+    "FieldName": "serverpass",
     "InputType": "text",
     "Category": "Valheim - General Settings",
-    "ParamFieldName": "password",
+    "ParamFieldName": "serverpass",
     "IncludeInCommandLine": false,
     "Required": true,
     "DefaultValue": "12345"
