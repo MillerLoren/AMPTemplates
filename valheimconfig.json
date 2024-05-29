@@ -23,7 +23,7 @@
     "DefaultValue": "PoweredByAMP"
   },
   {
-    "DisplayName": "Password",
+    "DisplayName": "Pass(can be blank)",
     "Description": "Password that clients must supply in order to connect. Can be left blank if used with mods that allow it",
     "FieldName": "serverpass",
     "InputType": "text",
