@@ -23,8 +23,8 @@
     "DefaultValue": "PoweredByAMP"
   },
   {
-    "DisplayName": "Server Password",
-    "Description": "Password that clients must supply in order to connect.",
+    "DisplayName": "Password",
+    "Description": "Password that clients must supply in order to connect. Can be left blank if used with mods that allow it",
     "FieldName": "serverpass",
     "InputType": "text",
     "Category": "Valheim - General Settings",
