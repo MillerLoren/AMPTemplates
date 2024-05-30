@@ -23,17 +23,6 @@
     "DefaultValue": "PoweredByAMP"
   },
   {
-    "DisplayName": "Pass(can be blank)",
-    "Description": "Password that clients must supply in order to connect. Can be left blank if used with mods that allow it",
-    "FieldName": "serverpass",
-    "InputType": "text",
-    "Category": "Valheim - General Settings",
-    "ParamFieldName": "serverpass",
-    "IncludeInCommandLine": false,
-    "Required": true,
-    "DefaultValue": "12345"
-  },
-  {
     "DisplayName": "Server is Public",
     "Description": "Whether or not the server appears on the server list. Disable for a LAN-only server.",
     "FieldName": "ServerPublic",
@@ -46,6 +35,16 @@
       "True": "1",
       "False": "0"
     }
+  },
+  {
+    "DisplayName": "Server Secret",
+    "Description": "Can be left blank if used with mods that allow it",
+    "FieldName": "serversecret",
+    "InputType": "text",
+    "Category": "Valheim - General Settings",
+    "ParamFieldName": "serversecret",
+    "IncludeInCommandLine": false,
+    "Required": false
   },
   {
     "DisplayName": "Enable Crossplay",
