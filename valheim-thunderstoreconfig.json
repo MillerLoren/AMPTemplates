@@ -351,7 +351,7 @@
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
         "Description": "Enable modpack downloading and installing.",
-        "Keywords": "Install,BepInEx,version",
+        "Keywords": "Install,Modpack,version",
         "FieldName": "modpack_install",
         "InputType": "checkbox",
         "IsFlagArgument": false,
@@ -368,7 +368,7 @@
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
         "Description": "Enter the modpack you would like to download from the dependency string, i.e. JewelHeim-RelicHeim-5.1.6",
-        "Keywords": "Install,BepInEx,version",
+        "Keywords": "Install,Modpack,version",
         "FieldName": "modpack",
         "InputType": "text",
         "IsFlagArgument": false,
@@ -377,5 +377,32 @@
         "DefaultValue": "",
         "Placeholder": "JewelHeim-RelicHeim-5.1.6",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Install mods",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Enables installing mods listed in the mods section.",
+        "Keywords": "Install,mods,version",
+        "FieldName": "mods_install",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "mods_install",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Mods",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Copy the list of mods from \"Modpacks\" section from r2modman. Do not include BepInEx.",
+        "Keywords": "Install,mods,version",
+        "FieldName": "modpack",
+        "InputType": "list",
+        "Special": "listfile:./Valheim/896660/modlist.txt"
     }
 ]

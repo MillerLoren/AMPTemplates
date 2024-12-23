@@ -1,3 +1,8 @@
+# Clean up temporary files
+rm -rf /tmp/main_package
+
+echo "Done!"
+
 ### Windows Batch Script ###
 @echo off
 
@@ -37,14 +42,13 @@ del main_package.zip
 
 :: Merge the config folder
 xcopy /E /I /Q /Y temp_main_package\config\* "%config_dir%" 2>nul
-rmdir /S /Q temp_main_package
 
 :: Remove existing plugins folder and recreate it
 rmdir /S /Q "%plugins_dir%"
 mkdir "%plugins_dir%"
 
-:: Read and process dependencies
-set manifest_path=%config_dir%\manifest.json
+:: Read and process dependencies from manifest.json
+set manifest_path=temp_main_package\manifest.json
 echo Reading dependencies from %manifest_path%...
 
 if exist "%manifest_path%" (
@@ -69,5 +73,8 @@ if exist "%manifest_path%" (
 ) else (
     echo manifest.json not found or no dependencies listed.
 )
+
+:: Clean up temporary files
+rmdir /S /Q temp_main_package
 
 echo Done!
