@@ -347,6 +347,23 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Install Modpack",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Enable modpack downloading and installing.",
+        "Keywords": "Install,BepInEx,version",
+        "FieldName": "modpack_install",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "modpack_install",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
         "DisplayName": "Modpack",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",

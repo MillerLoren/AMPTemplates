@@ -89,7 +89,10 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./modpackinst.sh {{$modpack}}"
+        "UpdateSourceArgs": "./modpackinst.sh {{$modpack}}",
+        "UpdateSourceConditionSetting": "modpack_install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Modpack Script Download",
@@ -105,6 +108,9 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/c modpackinst.bat {{$modpack}}"
+        "UpdateSourceArgs": "/c modpackinst.bat {{$modpack}}",
+        "UpdateSourceConditionSetting": "modpack_install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
     }
 ]
