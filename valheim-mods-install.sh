@@ -40,7 +40,11 @@ while IFS= read -r mod; do
     # Download and extract plugin
     download_url="$base_url/$author/$package/$version/"
     wget -q -O plugin.zip "$download_url"
-    7z rn plugin.zip $(7z l plugin.zip | grep '\\' | awk '{ print $6, gensub(/\\/, "/", "g", $6); }' | paste -s)
+    # Rename files in the zip to replace backslashes with forward slashes
+    7z l plugin.zip | grep '\\' | awk '{ print $6 }' | while read -r file; do
+        new_file=$(echo "$file" | tr '\\' '/')
+        7z rn plugin.zip "$file" "$new_file"
+    done
     unzip -o plugin.zip -d "$plugin_dir"
     rm -f plugin.zip
 
