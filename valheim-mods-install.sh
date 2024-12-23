@@ -42,17 +42,15 @@ while IFS= read -r mod; do
     # Download and extract plugin
     download_url="$base_url/$author/$package/$version/"
     wget -q -O plugin.zip "$download_url"
+    
+    # Rename files in the zip to replace backslashes with forward slashes
+    7z l plugin.zip | grep '\\' | awk '{ print $6 }' | while read -r file; do
+        new_file=$(echo "$file" | tr '\\' '/')
+        7z rn plugin.zip "$file" "$new_file"
+    done
+    
     unzip -o plugin.zip -d "$plugin_dir"
     rm -f plugin.zip
-
-    # Replace backslashes with forward slashes in extracted files
-    find "$plugin_dir" -type f | while read -r file; do
-        new_file=$(echo "$file" | tr '\\' '/')
-        if [ "$file" != "$new_file" ]; then
-            mkdir -p "$(dirname "$new_file")"
-            mv "$file" "$new_file"
-        fi
-    done
 
 done < "$modlist_file"
 
