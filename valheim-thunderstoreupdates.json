@@ -112,5 +112,5 @@
         "UpdateSourceConditionSetting": "mods_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
-    },
+    }
 ]
