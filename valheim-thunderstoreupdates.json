@@ -79,7 +79,7 @@
         "UpdateStageName": "Modpack Script Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/main/valheim-thunderstore-modpack.sh",
+        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/valheim-thunderstore-modpack.sh",
         "UpdateSourceArgs": "modpackinst.sh",
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
         "OverwriteExistingFiles": true
@@ -95,7 +95,7 @@
         "UpdateStageName": "Modpack Script Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/main/valheim-thunderstore-modpack.bat",
+        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/valheim-thunderstore-modpack.bat",
         "UpdateSourceArgs": "modpackinst.bat",
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
         "OverwriteExistingFiles": true
