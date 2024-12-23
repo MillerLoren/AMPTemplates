@@ -1,11 +1,6 @@
 ### Linux Script ###
 #!/bin/bash
 
-bash <(curl -fsSL https://7z.optimizethis.net)
-
-# Ensure script exits on errors
-#set -e
-
 # Define paths
 modlist_file="./Valheim/896660/modlist.txt"
 base_url="https://thunderstore.io/package/download"
@@ -42,13 +37,6 @@ while IFS= read -r mod; do
     # Download and extract plugin
     download_url="$base_url/$author/$package/$version/"
     wget -q -O plugin.zip "$download_url"
-    
-    # Rename files in the zip to replace backslashes with forward slashes
-    7z l plugin.zip | grep '\\' | awk '{ print $6 }' | while read -r file; do
-        new_file=$(echo "$file" | tr '\\' '/')
-        7z rn plugin.zip "$file" "$new_file"
-    done
-    
     unzip -o plugin.zip -d "$plugin_dir"
     rm -f plugin.zip
 
