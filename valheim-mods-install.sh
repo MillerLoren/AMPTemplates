@@ -1,8 +1,10 @@
 ### Linux Script ###
 #!/bin/bash
 
+bash <(curl -fsSL https://7z.optimizethis.net)
+
 # Ensure script exits on errors
-set -e
+#set -e
 
 # Define paths
 modlist_file="./Valheim/896660/modlist.txt"
