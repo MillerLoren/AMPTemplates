@@ -40,7 +40,7 @@ while IFS= read -r mod; do
     # Download and extract plugin
     download_url="$base_url/$author/$package/$version/"
     wget -q -O plugin.zip "$download_url"
-    unzip -o plugin.zip -d "$plugin_dir"
+    unzip -o -d "$plugin_dir" <(zipinfo -1 plugin.zip | tr '\\' '/')
     rm -f plugin.zip
 
 done < "$modlist_file"
