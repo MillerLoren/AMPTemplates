@@ -401,7 +401,7 @@
         "Subcategory": "Runtime Configuration:build:3",
         "Description": "Copy the list of mods from \"Modpacks\" section from r2modman. Do not include BepInEx.",
         "Keywords": "Install,mods,version",
-        "FieldName": "modpack",
+        "FieldName": "modlist",
         "InputType": "list",
         "Special": "listfile:./Valheim/896660/modlist.txt"
     }
