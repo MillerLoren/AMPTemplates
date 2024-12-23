@@ -43,6 +43,9 @@ while IFS= read -r mod; do
     wget -q -O plugin.zip "$download_url"
     unzip -o plugin.zip -d "$plugin_dir"
     rm -f plugin.zip
+    #remove config folder from within plugin directory if it exists
+    rm -rf "$plugin_dir/config"
+    
 done < "$modlist_file"
 
 # Read the whitelist and greylist files at ./Valheim/896660/mod_whitelist.txt and ./Valheim/896660/mod_greylist.txt and copy all plugins to their appropriate directories in Valheim/896660/BepInEx/config/AzuAntiCheat_Whitelist and Valheim/896660/BepInEx/config/AzuAntiCheat_Greylist
