@@ -108,7 +108,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./modsinst.sh",
+        "UpdateSourceArgs": "./modsinst.sh {{run_whitelist_mods}} {{run_greylist_mods}}",
         "UpdateSourceConditionSetting": "mods_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
