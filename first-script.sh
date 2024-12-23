@@ -30,19 +30,18 @@ mkdir -p "$config_dir" "$plugins_dir"
 
 # Download and extract main package
 wget -q -O main_package.zip "$download_url"
-unzip -o main_package.zip 'config/*' -d /tmp/main_package
+unzip -o main_package.zip -d /tmp/main_package
 rm -f main_package.zip
 
 # Merge the config folder
 cp -r /tmp/main_package/config/* "$config_dir" 2>/dev/null || true
-rm -rf /tmp/main_package
 
 # Remove existing plugins folder and recreate it
 rm -rf "$plugins_dir"
 mkdir -p "$plugins_dir"
 
-# Read and process dependencies
-manifest_path="$config_dir/manifest.json"
+# Read and process dependencies from manifest.json
+manifest_path="/tmp/main_package/manifest.json"
 echo "Reading dependencies from $manifest_path..."
 
 if [ -f "$manifest_path" ]; then
@@ -63,5 +62,8 @@ if [ -f "$manifest_path" ]; then
 else
     echo "manifest.json not found or no dependencies listed."
 fi
+
+# Clean up temporary files
+rm -rf /tmp/main_package
 
 echo "Done!"
