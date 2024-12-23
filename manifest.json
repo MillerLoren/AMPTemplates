@@ -1,9 +1,10 @@
 {
-	"id": "018fc11f-bb42-7922-a178-aeec1e968659",
-	"authors": ["MillerLoren", "CubeCoders Limited", "AMP Community"],
-	"origin": "https://github.com/MillerLoren/AMPTemplates.git",
-	"url": "https://github.com/MillerLoren/AMPTemplates",
-	"imagefile": "",
-	"prefix": "TheSkwad",
-	"repotype": "AppTemplates"
+    "id": "af4d4cc0-9c1d-4dc1-8143-6c70733262d5",
+    "authors": [
+        "MillerLoren"
+    ],
+    "origin": "https://github.com/MillerLoren",
+    "url": "https://github.com/MillerLoren",
+    "imagefile": "",
+    "prefix": "MillerLoren"
 }
