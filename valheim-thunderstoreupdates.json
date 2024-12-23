@@ -76,44 +76,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Modpack Script Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/valheim-modpack-install.sh",
-        "UpdateSourceArgs": "modpackinst.sh",
-        "UpdateSourceTarget": "{{$FullInstanceDir}}",
-        "OverwriteExistingFiles": true
-    },
-    {
-        "UpdateStageName": "Install Modpack",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./modpackinst.sh {{modpack}}",
-        "UpdateSourceConditionSetting": "modpack_install",
-        "UpdateSourceConditionValue": "true",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Modpack Script Download",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/valheim-modpack-install.bat",
-        "UpdateSourceArgs": "modpackinst.bat",
-        "UpdateSourceTarget": "{{$FullInstanceDir}}",
-        "OverwriteExistingFiles": true
-    },
-    {
-        "UpdateStageName": "Install Modpack",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/c modpackinst.bat {{modpack}}",
-        "UpdateSourceConditionSetting": "modpack_install",
-        "UpdateSourceConditionValue": "true",
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Mods Script Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
