@@ -9,7 +9,6 @@ modlist_file="./Valheim/896660/modlist.txt"
 base_url="https://thunderstore.io/package/download"
 base_dir="Valheim/896660/BepInEx"
 plugins_dir="$base_dir/plugins"
-temp_dir="/tmp/valheim_mod"
 
 # Ensure modlist exists
 if [ ! -f "$modlist_file" ]; then
@@ -41,22 +40,9 @@ while IFS= read -r mod; do
     # Download and extract plugin
     download_url="$base_url/$author/$package/$version/"
     wget -q -O plugin.zip "$download_url"
-
-    # Extract to temporary directory to handle backslashes
-    mkdir -p "$temp_dir"
-    unzip -q plugin.zip -d "$temp_dir"
-
-    # Normalize paths and move to the target directory
-    find "$temp_dir" -type f | while IFS= read -r file; do
-        normalized_path="${file#"$temp_dir/"}"
-        normalized_path="${normalized_path//\\/\/}"
-        target_path="$plugin_dir/$normalized_path"
-        mkdir -p "$(dirname "$target_path")"
-        mv "$file" "$target_path"
-    done
-
-    # Cleanup
-    rm -rf "$temp_dir" plugin.zip
+    7z rn plugin.zip $(7z l plugin.zip | grep '\\' | awk '{ print $6, gensub(/\\/, "/", "g", $6); }' | paste -s
+    unzip -o plugin.zip -d "$plugin_dir"
+    rm -f plugin.zip
 
 done < "$modlist_file"
 
