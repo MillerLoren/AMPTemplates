@@ -112,5 +112,43 @@
         "UpdateSourceConditionSetting": "modpack_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
-    }
+    },
+    {
+        "UpdateStageName": "Mods Script Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/valheim-mods-install.bat",
+        "UpdateSourceArgs": "modsinst.bat",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "Install Mods",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "cmd.exe",
+        "UpdateSourceArgs": "/c modsinst.bat",
+        "UpdateSourceConditionSetting": "mods_install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Mods Script Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/valheim-mods-install.sh",
+        "UpdateSourceArgs": "modsinst.sh",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "OverwriteExistingFiles": true
+    },
+    {
+        "UpdateStageName": "Install Mods",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "./modsinst.sh",
+        "UpdateSourceConditionSetting": "mods_install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
+    },
 ]
