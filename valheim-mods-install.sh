@@ -20,7 +20,7 @@ while IFS= read -r mod; do
     fi
 
     IFS='-' read -r author package version <<< "$mod"
-    plugin_dir="$plugins_dir/$package"
+    plugin_dir="$plugins_dir/$author-$package"
 
     # Check if plugin already exists and version matches
     if [ -f "$plugin_dir/manifest.json" ]; then

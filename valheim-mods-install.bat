@@ -26,7 +26,7 @@ for /f "delims=" %%A in (%modlist_file%) do (
         set "version=%%D"
     )
 
-    set "plugin_dir=%plugins_dir%\!package!"
+    set "plugin_dir=%plugins_dir%\!author!-!package!"
 
     :: Check if plugin already exists and version matches
     if exist "!plugin_dir!\manifest.json" (
