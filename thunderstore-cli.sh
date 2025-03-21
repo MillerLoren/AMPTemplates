@@ -33,9 +33,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# echo the contents of the directory
+ls -la
+
 # Move the CLI from thunderstore-cli/tcli-$CLI_VERSION-linux-x64 to base directory
 mv tcli-$CLI_VERSION-linux-x64/tcli ../tcli
 mv tcli-$CLI_VERSION-linux-x64/tcli-bepinex-installer ../tcli-bepinex-installer
+
 
 # Remove downloaded archive
 rm -f $CLI_ARCHIVE
