@@ -29,7 +29,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./thunderstore-cli.sh {{cli-version}} {{mods}} {{$BaseDirectory}}",
+        "UpdateSourceArgs": "./thunderstore-cli.sh {{cli_version}} {{mods}} {{$BaseDirectory}}",
         "UpdateSourceConditionSetting": "mods_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
