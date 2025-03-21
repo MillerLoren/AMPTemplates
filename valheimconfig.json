@@ -347,21 +347,19 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Install mods",
+        "DisplayName": "Thunderstore CLI Version",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Enables installing mods listed in the mods section.",
-        "Keywords": "Install,mods,version",
-        "FieldName": "mods_install",
-        "InputType": "checkbox",
+        "Description": "",
+        "Keywords": "Install,Thunderstore,version",
+        "FieldName": "cli-version",
+        "InputType": "text",
         "IsFlagArgument": false,
-        "ParamFieldName": "mods_install",
+        "ParamFieldName": "cli-version",
         "IncludeInCommandLine": false,
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "DefaultValue": "0.2.4",
+        "Placeholder": "0.2.4",
+        "EnumValues": {}
     },
     {
         "DisplayName": "Mods",
@@ -369,62 +367,8 @@
         "Subcategory": "Runtime Configuration:build:3",
         "Description": "Copy the list of mods from \"Modpacks\" section from r2modman. Do not include BepInEx.",
         "Keywords": "Install,mods,version",
-        "FieldName": "modlist",
+        "FieldName": "mods",
         "InputType": "list",
-        "Special": "listfile:./Valheim/896660/modlist.txt"
-    },
-    {
-        "DisplayName": "Use Whitelist Mods",
-        "Category": "Updates",
-        "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Turns on syncing the list of mods from the whitelist. To the AzuAntiCheat config folder.",
-        "Keywords": "Install,mods,version",
-        "FieldName": "run_whitelist_mods",
-        "InputType": "checkbox",
-        "IsFlagArgument": false,
-        "ParamFieldName": "run_whitelist_mods",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Whitelist Mods",
-        "Category": "Updates",
-        "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Copy the list of mods you want to whitelist from \"Modpacks\" section from r2modman. Do not include BepInEx.",
-        "Keywords": "Install,mods,version",
-        "FieldName": "whitelist_mods",
-        "InputType": "list",
-        "Special": "listfile:./Valheim/896660/mod_whitelist.txt"
-    },
-    {
-        "DisplayName": "Use Greylist Mods",
-        "Category": "Updates",
-        "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Turns on syncing the list of mods from the greylist. To the AzuAntiCheat config folder.",
-        "Keywords": "Install,mods,version",
-        "FieldName": "run_greylist_mods",
-        "InputType": "checkbox",
-        "IsFlagArgument": false,
-        "ParamFieldName": "run_greylist_mods",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Greylist Mods",
-        "Category": "Updates",
-        "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Copy the list of mods you want to greylist from \"Modpacks\" section from r2modman. Do not include BepInEx.",
-        "Keywords": "Install,mods,version",
-        "FieldName": "greylist_mods",
-        "InputType": "list",
-        "Special": "listfile:./Valheim/896660/mod_greylist.txt"
+        "Special": "listfile:./Valheim/896660/mods.txt"
     }
 ]
