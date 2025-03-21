@@ -362,6 +362,23 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Install mods",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Enables installing mods listed in the mods section.",
+        "Keywords": "Install,mods,version",
+        "FieldName": "mods_install",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "mods_install",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
         "DisplayName": "Mods",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
