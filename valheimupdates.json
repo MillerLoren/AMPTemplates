@@ -29,7 +29,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./thunderstore-cli.sh {{cli_version}} {{mods}} {{$BaseDirectory}}",
+        "UpdateSourceArgs": "./thunderstore-cli.sh {{cli_version}} {{mods}} {{$FullInstanceDir}}/Valheim/896660",
         "UpdateSourceConditionSetting": "mods_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
