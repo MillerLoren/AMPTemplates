@@ -12,10 +12,6 @@ CLI_URL="https://github.com/thunderstore-io/thunderstore-cli/releases/download/$
 
 echo "[Thunderstore CLI] Installing Thunderstore CLI v$CLI_VERSION..."
 
-# Create CLI directory if it doesn't exist
-mkdir -p $CLI_DIR
-cd $CLI_DIR
-
 # Remove existing archive if present
 rm -f $CLI_ARCHIVE
 
@@ -34,8 +30,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # Move the CLI from thunderstore-cli/tcli-$CLI_VERSION-linux-x64 to base directory
-mv thunderstore-cli/tcli-$CLI_VERSION-linux-x64/tcli ../../tcli
-mv thunderstore-cli/tcli-$CLI_VERSION-linux-x64/tcli-bepinex-installer ../../tcli-bepinex-installer
+mv tcli-$CLI_VERSION-linux-x64/tcli ../tcli
+mv tcli-$CLI_VERSION-linux-x64/tcli-bepinex-installer ../tcli-bepinex-installer
 
 # Remove downloaded archive
 rm -f $CLI_ARCHIVE
