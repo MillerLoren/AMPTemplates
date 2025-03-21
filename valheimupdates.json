@@ -19,7 +19,7 @@
         "UpdateStageName": "CLI Setup",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore/thunderstore-cli.sh",
+        "UpdateSourceData": "https://raw.githubusercontent.com/MillerLoren/AMPTemplates/refs/heads/valheim-thunderstore-v2/thunderstore-cli.sh",
         "UpdateSourceArgs": "thunderstore-cli.sh",
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
         "OverwriteExistingFiles": true
