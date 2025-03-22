@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# Variables passed from AMP
 MODS=$1
-BASE_DIR=$2
+
+GAME_BASE_DIR="Valheim/896660"
 
 # CLI paths
-CLI_DIR="$BASE_DIR/thunderstore-cli"
+CLI_DIR="Valheim/thunderstore-cli"
 TCLI="$CLI_DIR/tcli"
-VALHEIM_EXE="$BASE_DIR/valheim_server.x86_64"
+VALHEIM_EXE="$GAME_BASE_DIR/valheim_server.x86_64"
 
 # Verify Thunderstore CLI exists
 if [ ! -f "$TCLI" ]; then

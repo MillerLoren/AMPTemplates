@@ -20,7 +20,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"mkdir -p \\\"{{$FullRootDir}}thunderstore-cli\\\" && wget -qO \\\"thunderstore-cli.tar.gz\\\" \\\"https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz\\\" | tar -xzf \\\"thunderstore-cli.tar.gz\\\" -C \\\"{{$FullRootDir}}thunderstore-cli\\\" && rm \\\"{{$FullRootDir}}thunderstore-cli.tar.gz\\\" && chmod +x \\\"{{$FullRootDir}}thunderstore-cli/tcli\\\" \\\"{{$FullRootDir}}thunderstore-cli/tcli-bepinex-installer\\\"\"",
+        "UpdateSourceArgs": "-c \"mkdir -p \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli\\\" && wget -qO \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" \\\"https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz\\\" | tar -xzf \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" -C \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli\\\" && rm \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" && chmod +x \\\"{{$FullInstanceDir}}thunderstore-cli/tcli\\\" \\\"{{$FullInstanceDir}}thunderstore-cli/tcli-bepinex-installer\\\"\"",
         "SkipOnFailure": false
     },
     {
@@ -37,7 +37,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./thunderstore-cli.sh {{mods}} {{$FullInstanceDir}}Valheim/896660",
+        "UpdateSourceArgs": "./thunderstore-cli.sh {{mods}}",
         "UpdateSourceConditionSetting": "mods_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
