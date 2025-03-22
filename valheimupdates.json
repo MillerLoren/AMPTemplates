@@ -20,7 +20,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"mkdir -p {{$FullRootDir}}thunderstore-cli && wget -qO thunderstore-cli.tar.gz https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz | tar -xzf {{$FullRootDir}}thunderstore-cli.tar.gz -C {{$FullRootDir}}thunderstore-cli --strip-components=1 && rm {{$FullRootDir}}thunderstore-cli.tar.gz && chmod +x {{$FullRootDir}}thunderstore-cli/tcli {{$FullRootDir}}thunderstore-cli/tcli-bepinex-installer\"",
+        "UpdateSourceArgs": "-c \"mkdir -p {{$FullRootDir}}thunderstore-cli && wget -qO thunderstore-cli.tar.gz https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz | tar -xzf {{$FullRootDir}}thunderstore-cli.tar.gz -C {{$FullRootDir}}thunderstore-cli && rm {{$FullRootDir}}thunderstore-cli.tar.gz && chmod +x {{$FullRootDir}}thunderstore-cli/tcli {{$FullRootDir}}thunderstore-cli/tcli-bepinex-installer\"",
         "SkipOnFailure": false
     },
     {
