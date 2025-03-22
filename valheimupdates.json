@@ -20,21 +20,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"\
-            echo '[Thunderstore CLI] Starting CLI download process...'; \
-            mkdir -p \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli\\\" || { echo '[Thunderstore CLI] ERROR: Failed to create CLI directory.'; exit 1; }; \
-            wget -q \\\"https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz\\\" -O \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\"; \
-            if [ ! -s \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" ]; then \
-                echo '[Thunderstore CLI] ERROR: Downloaded file is empty or failed to download.'; \
-                rm -f \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\"; \
-                exit 1; \
-            else \
-                echo '[Thunderstore CLI] CLI downloaded successfully.'; \
-            fi; \
-            tar -xzf \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" -C \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli\\\" --strip-components=1 || { echo '[Thunderstore CLI] ERROR: Failed to extract CLI archive.'; rm -f \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\"; exit 1; }; \
-            rm -f \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\"; \
-            chmod +x \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli/tcli\\\" \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli/tcli-bepinex-installer\\\" || { echo '[Thunderstore CLI] ERROR: Failed to set CLI executable permissions.'; exit 1; }; \
-            echo '[Thunderstore CLI] Thunderstore CLI installation completed successfully.'\"",
+        "UpdateSourceArgs": "-c \"export DOWNLOAD_URL=\\\"https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz\\\" && echo '[Thunderstore CLI] Download URL: '$DOWNLOAD_URL && mkdir -p \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli\\\" || { echo '[Thunderstore CLI] ERROR: Failed to create CLI directory.'; exit 1; }; wget -q \\\"$DOWNLOAD_URL\\\" -O \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" && if [ ! -s \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" ]; then echo '[Thunderstore CLI] ERROR: Downloaded file is empty or failed to download.'; rm -f \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\"; exit 1; else echo '[Thunderstore CLI] CLI downloaded successfully.'; fi; tar -xzf \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" -C \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli\\\" --strip-components=1 || { echo '[Thunderstore CLI] ERROR: Failed to extract CLI archive.'; rm -f \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\"; exit 1; }; rm -f \\\"{{$FullInstanceDir}}thunderstore-cli.tar.gz\\\" && chmod +x \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli/tcli\\\" \\\"{{$FullInstanceDir}}Valheim/thunderstore-cli/tcli-bepinex-installer\\\" || { echo '[Thunderstore CLI] ERROR: Failed to set CLI executable permissions.'; exit 1; }; echo '[Thunderstore CLI] Thunderstore CLI installation completed successfully.'\"",
         "SkipOnFailure": false
     },
     {
