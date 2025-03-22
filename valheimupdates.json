@@ -16,9 +16,12 @@
         "SkipOnFailure": true
     },
     {
-        "SourceName": "ThunderstoreCLI",
+        "UpdateStageName": "ThunderstoreCLI Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"mkdir -p thunderstore-cli && wget -qO- https://github.com/thunderstore-io/thunderstore-cli/releases/download/{{CLI_VERSION}}/tcli-{{CLI_VERSION}}-linux-x64.tar.gz | tar -xz -C thunderstore-cli --strip-components=1 && chmod +x thunderstore-cli/tcli thunderstore-cli/tcli-bepinex-installer\"",
-        "ExecutablePath": "/bin/bash"
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "CLI Setup",
@@ -34,7 +37,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "./thunderstore-cli.sh {{mods}} {{$FullInstanceDir}}/Valheim/896660",
+        "UpdateSourceArgs": "./thunderstore-cli.sh {{mods}} {{$FullInstanceDir}}Valheim/896660",
         "UpdateSourceConditionSetting": "mods_install",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
